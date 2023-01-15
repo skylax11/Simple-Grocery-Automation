@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79DA4090-018D-4A9D-8601-EAB1B8071E9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>otomasyon</RootNamespace>
+    <AssemblyName>otomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="asddas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>asddas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="controller\Controller.cs" />
+    <Compile Include="dao\Repository.cs" />
+    <Compile Include="enumaration\loginStatus.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasiyer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasiyer.Designer.cs">
+      <DependentUpon>Kasiyer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="marketDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>marketDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="meyveSebze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="meyveSebze.Designer.cs">
+      <DependentUpon>meyveSebze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\LoginTable.cs" />
+    <Compile Include="personelAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelAdmin.Designer.cs">
+      <DependentUpon>personelAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sifreDegistir.Designer.cs">
+      <DependentUpon>sifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="urun.cs" />
+    <Compile Include="urun2.cs" />
+    <Compile Include="urunAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="urunAdmin.Designer.cs">
+      <DependentUpon>urunAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasiyer.resx">
+      <DependentUpon>Kasiyer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="meyveSebze.resx">
+      <DependentUpon>meyveSebze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelAdmin.resx">
+      <DependentUpon>personelAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="sifreDegistir.resx">
+      <DependentUpon>sifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urunAdmin.resx">
+      <DependentUpon>urunAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="asddas.xsc">
+      <DependentUpon>asddas.xsd</DependentUpon>
+    </None>
+    <None Include="asddas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>asddas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="asddas.xss">
+      <DependentUpon>asddas.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet.xsc">
+      <DependentUpon>marketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet.xss">
+      <DependentUpon>marketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet1.xsc">
+      <DependentUpon>marketDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet1.xss">
+      <DependentUpon>marketDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet2.xsc">
+      <DependentUpon>marketDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet2.xss">
+      <DependentUpon>marketDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet3.xsc">
+      <DependentUpon>marketDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet3.xss">
+      <DependentUpon>marketDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet4.xsc">
+      <DependentUpon>marketDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet4.xss">
+      <DependentUpon>marketDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet5.xsc">
+      <DependentUpon>marketDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet5.xss">
+      <DependentUpon>marketDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet6.xsc">
+      <DependentUpon>marketDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet6.xss">
+      <DependentUpon>marketDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet7.xsc">
+      <DependentUpon>marketDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="marketDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>marketDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="marketDataSet7.xss">
+      <DependentUpon>marketDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3362707.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
